@@ -65,7 +65,7 @@ There are 3 pieces of code:
   - **git add remote origin value_of_clone_url_http**
     **git push -u origin master**
 
-### You might be wondering why you have to repeat the above steps. The reason is S3 prefers the index file to be on the first level after the bucket name. In addition, terraform does not support sending folders. It can only upload objects one at a time.
+### \*\*You might be wondering why you have to repeat the above steps. The reason is, S3 does not accept the index.html file to exist under another sub-folder. Furthermore, terraform does not support sending folders. It can only upload objects one at a time.
 
 Code commit is connected to an AWS lambda function that gets triggered everytime someone pushes changes to the codeCommit repository. This lambda function takes those files and copies them to the S3 bucket that's hosting the react-web-app. **Make sure the bucket name you choose is unique**
 
