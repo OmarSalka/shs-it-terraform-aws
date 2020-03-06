@@ -1,0 +1,48 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "logs:CreateLogGroup",
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": ["logs:CreateLogStream", "logs:PutLogEvents"],
+      "Resource": ["*"]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "dynamodb:ListContributorInsights",
+        "dynamodb:ListGlobalTables",
+        "dynamodb:ListTables",
+        "dynamodb:ListBackups",
+        "dynamodb:PurchaseReservedCapacityOfferings"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "dynamodb:BatchWriteItem",
+        "dynamodb:UpdateTimeToLive",
+        "dynamodb:PutItem",
+        "dynamodb:CreateTableReplica",
+        "dynamodb:CreateBackup",
+        "dynamodb:DeleteTableReplica",
+        "dynamodb:UpdateContributorInsights",
+        "dynamodb:UpdateGlobalTable",
+        "dynamodb:UpdateItem",
+        "dynamodb:UpdateTableReplicaAutoScaling",
+        "dynamodb:UpdateContinuousBackups",
+        "dynamodb:CreateTable",
+        "dynamodb:UpdateGlobalTableSettings",
+        "dynamodb:RestoreTableFromBackup",
+        "dynamodb:CreateGlobalTable",
+        "dynamodb:UpdateTable"
+      ],
+      "Resource": "arn:aws:dynamodb:*:*:table/*"
+    }
+  ]
+}
